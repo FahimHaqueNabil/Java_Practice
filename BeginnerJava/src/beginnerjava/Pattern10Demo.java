@@ -1,0 +1,41 @@
+package beginnerjava;
+
+import java.util.Scanner;
+
+public class Pattern10Demo {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n;
+
+        System.out.print("Enter a number: ");
+        n = input.nextInt();
+
+        // 1
+        for (int row = n; row >= 1; row--){
+            // print Spaces
+            for (int col = 1; col <= n-row; col++){
+                System.out.print(" ");
+            }
+            // print Stars
+            for (int col = 1; col <= 2 * row - 1; col++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        // 1
+        for (int row = n; row >= 1; row--){
+            // print Spaces
+            for (int col = 1; col <= n-row; col++){
+                System.out.print(" ");
+            }
+            // print Numbers
+            for (int col = 1; col <= 2 * row - 1; col++){
+                System.out.print(col);
+            }
+            System.out.println();
+        }
+
+    }
+}
